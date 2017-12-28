@@ -1,0 +1,271 @@
+@import 'smart-grid.less';
+@import 'reset.css';
+@import 'fonts.css';
+
+html {
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column; 
+	font-family: 'Roboto';
+	font-weight: 400;
+	height: 100vh;
+ }
+ .container{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	max-width: 1280px;
+ }
+ 
+ /*--- эффект к ссылкам ---*/
+.link-effect-1 {
+  position: relative;
+  transition: all 0s;
+}
+.link-effect-1:before {
+  border-left: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80%;
+  height: 0;
+  transform: translateX(-50%);
+  transition: width 0.3s ease 0s;
+}
+.link-effect-1:hover:before,
+.active:before {
+  transition: width 0.3s ease 0s;
+  transition: height 0.3s ease 0s;
+  height: 100%;
+  width: 100%;
+}
+ 
+ /*--- top navigation ---*/
+.top-menu-toggle {
+  display: none;
+}
+#menuToggle {
+  display: none;
+}
+#menuToggle:checked ~ .top-menu-nav {
+  height: 280px;
+}
+.top-menu {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: #ffffff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  z-index: 100;
+}
+.top-menu-toggle {
+  display: none;
+  height: 75px;
+}
+.top-menu-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-around;
+  height: 100%;
+}
+.top-menu-nav-item {
+  box-sizing: border-box;
+  color: #000000;
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 500;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+@media screen and (max-width: 700px) {
+  .top-menu {
+    display: table-cell;
+  }
+  .top-menu-toggle {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 0px;
+    font-size: 3.0rem;
+    font-weight: 600;
+  }
+  .top-menu-nav {
+    background: #ffffff;
+    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.5);
+    display: block;
+    width: 130px;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
+  }
+  .top-menu-nav-item {
+    display: block;
+    margin: 10px 0px;
+    width: 130px;
+  }
+}
+
+/*--- main content ---*/
+.adminH1{
+	margin-bottom: 20px;
+	padding-top: 120px;
+	text-align: center;
+	&_titel{
+		font-size: 1.8rem;
+	}
+}
+/* .debug{
+	.debug( rgba(120,120,120, 0.1), 1px solid #999);
+} */
+.wrapper{
+	.wrapper();
+}
+
+/*--- block with buttons orders---*/
+.admin-form-orders_btn{
+	.row-flex();
+	.justify-content(center);
+	margin-bottom: 20px;
+	
+	input{
+		cursor: pointer;
+	}
+	
+	&-remove{
+		.col();
+		.col-2();
+		.col-md-2();
+		.col-sm-3();
+		.col-xs-4();
+	}
+	&-add{
+		.col();
+		.col-2();
+		.col-md-2();
+		.col-sm-3();
+		.col-xs-4();
+	}
+	&-save{
+		.col();
+		.col-2();
+		.col-md-2();
+		.col-sm-3();
+		.col-xs-4();
+	}
+}
+
+/*--- block with form statistics ---*/
+.admin_form_statistics{
+	margin: 20px auto;
+	text-align: center;
+	width: 650px;
+	
+	div{
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 0px;
+	}
+	
+	
+}
+
+/*--- table block ---*/
+.adminTable{
+	margin-bottom: 20px;
+	div.adminTable_row:nth-child(even){
+		margin: 1px 0px;
+	}
+	&_row{
+		display: flex;
+		justify-content: center;
+	}
+	&_col{
+		
+	}
+	div.adminTable_cell:nth-child(even){
+		margin: 0px 1px;
+	}
+	&_cell{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		outline: 1px solid #999;
+		
+		
+		width: 106px;
+		height: 40px;
+		
+			
+		&-checkbox{
+			width: 25px;
+		}
+		&-id, &-price{
+			width: 90px;
+		}
+		&-date{
+			width: 140px;
+		}
+		&-name, &-phone, &-email{
+			width: 120px;
+		}
+		&-stat{
+			text-align: center;
+			width: 120px;
+			height: 100px;
+		}
+		
+		input{
+			cursor: pointer;
+		}
+		
+		input[name='name']{
+			width: 110px;
+			height: 20px;
+		}
+		
+		input[name='phone'], input[name='email']{
+			width: 110px;
+			height: 18px;
+		}
+		
+		input[name='id'], input[name='price']{
+			width: 80px;
+			height: 18px;
+		}
+		input[type='date']{
+			width: 130px;
+		}
+	}
+}
+/*---popup---*/
+.popup{
+	display: none;
+}
+ /*--- footer ---*/
+footer {
+  display: block;
+  background: #cf991a;
+  margin: auto 0 0 0;
+  width: 100%;
+  height: 100px;
+  
+  div{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+  }
+}

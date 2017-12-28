@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# 
+          profile: http://ogp.me/ns/profile#">
+<head>
+	<title>Панель администратора land-os.ru</title>
+			<meta http-equiv="Content-Type"   content="text/html; charset=utf-8" />
+			<meta name="description"  content="Панель администратора land-os.ru" />
+			<meta name="keywords"  content="администратор,панель,панель администратора,управление лендингом" />
+			<meta name="viewport"  content="width=device-width" />
+			<meta name="robots"  content="index, follow" />
+				<link href="favicon.ico" rel="shortcut icon" type="image/png" />
+				<link href="favicon.ico" rel="icon" type="image/png" />
+				<!--<link type="text/css" rel="stylesheet" href="css/main.css" />-->
+			<link type="text/css" rel="stylesheet" href="css/main_admin.css" />
+</head>
+<body>
+	<div class='container'>
+		<nav>
+			<div class="top-menu">
+				<label class="top-menu-toggle" for="menuToggle">&equiv;</label>
+				<input type="checkbox" id="menuToggle"/>
+				<div class="top-menu-nav">
+						<a class="top-menu-nav-item link-effect-1 active" href="http://land-os.ru/adminmain/adminindex" >Главная</a>
+						<a class="top-menu-nav-item link-effect-1 " href="http://land-os.ru/adminmain/adminorders" >Заказы</a>
+						<a class="top-menu-nav-item link-effect-1 " href="http://land-os.ru/adminmain/adminstatistics" >Статистика</a>
+						<a class="top-menu-nav-item link-effect-1 " href="http://land-os.ru/adminmain/adminsettings" >Настройки</a>
+						<a class="top-menu-nav-item link-effect-1 " href="http://land-os.ru/adminmain/adminyandexdirect" >Яндекс-Директ</a>
+						<a class="top-menu-nav-item link-effect-1 " href="http://land-os.ru/function.php?func=logout" >Выход</a>
+				</div>
+			</div>
+		</nav>		
+		<div class="adminH1">
+			<h1 class="adminH1_titel">Общая статистика land-os.ru</h1>
+		</div>
+		
+		<div class='wrapper'>
+			<form class="admin-form-orders" name="admin_orders">
+				<div class='admin-form-orders_btn'>
+					<input class="admin-form-orders_btn-remove" type="submit" name="delete" value="Удалить">
+					<input class="admin-form-orders_btn-add" type="submit" name="add" value="Добавить">
+					<input class="admin-form-orders_btn-save" type="submit" name="admin_orders" value="Сохранить">
+				</div>
+				<div class="adminTable">
+					<div class="adminTable_row">
+						<div class="adminTable_cell adminTable_cell-checkbox">
+						</div>
+						<div class="adminTable_cell adminTable_cell-id">
+							ID
+						</div>
+						<div class="adminTable_cell adminTable_cell-name">
+							Имя
+						</div>
+						<div class="adminTable_cell adminTable_cell-price">
+							Цена
+						</div>
+						<div class="adminTable_cell adminTable_cell-phone">
+							Телефон
+						</div>
+						<div class="adminTable_cell adminTable_cell-email">
+							Мэйл
+						</div>
+						<div class="adminTable_cell adminTable_cell-date">
+							Дата
+						</div>
+						<div class="adminTable_cell adminTable_cell-date">
+							Дата<br>подтв
+						</div>
+						<div class="adminTable_cell adminTable_cell-date">
+							Дата<br>оплаты
+						</div>
+						<div class="adminTable_cell adminTable_cell-date">
+							Дата<br>анулиров
+						</div>
+					</div>
+					<!--
+					<div class="adminTable_row">
+						<div class="adminTable_cell adminTable_cell-checkbox">
+							<input  type="checkbox" name="checkbox">
+						</div>
+						<div class="adminTable_cell adminTable_cell-id">
+							<input  type="number" name="id" value="1" disabled>
+						</div>
+						<div class="adminTable_cell adminTable_cell-name">
+							<input  type="text" name="name" value="" pattern="^[0-9a-zA-Zа-яА-ЯёЁ_ ]+$" title="Допустимы буквы и цифры" maxlength="100"  required disabled />
+						</div>
+						<div class="adminTable_cell adminTable_cell-price">
+							<input  type="number" name="price" value="" title="Десять цифр без пробелов" disabled />
+						</div>
+						<div class="adminTable_cell adminTable_cell-phone">
+							<input  type="tel" name="phone" value="" title="Десять цифр без пробелов" pattern='[0-9]{10}' required disabled />
+						</div>
+						<div class="adminTable_cell adminTable_cell-email">
+							<input  type="email" name="email" pattern='^[a-z0-9_][a-z0-9\._-]*@([a-z0-9]+([a-z0-9-]*[a-z0-9]+)*\.)+[a-z]+$' value="" disabled>
+						</div>
+						<div class="adminTable_cell adminTable_cell-date">
+							<input  type="date" name="date_order" value="" title="Введите дату в формате дд.мм.гггг время в формате чч:мм:сс" pattern='\d{2}\.\d{2}\.\d{4}(\s\d{2}:\d{2}:\d{2}){0,1}' required disabled />
+						</div>
+						<div class="adminTable_cell adminTable_cell-date">
+							<input  type="date" name="date_confirm" value="" disabled >
+						</div>
+						<div class="adminTable_cell adminTable_cell-date">
+							<input  type="date" name="date_pay" value="" disabled >
+						</div>
+						<div class="adminTable_cell adminTable_cell-date">
+							<input  type="date" name="date_cancel" value="" disabled >
+						</div>
+					</div>
+					<div class="adminTable_row">
+						<div class="adminTable_cell adminTable_cell-checkbox">
+							<input  type="checkbox" name="checkbox" >
+						</div>
+						<div class="adminTable_cell adminTable_cell-id">
+							<input  type="number" name="id" value="2" disabled>
+						</div>
+						<div class="adminTable_cell adminTable_cell-name">
+							<input  type="text" name="name" value="" pattern="^[0-9a-zA-Zа-яА-ЯёЁ_ ]+$" title="Допустимы буквы и цифры" maxlength="100"  required disabled />
+						</div>
+						<div class="adminTable_cell adminTable_cell-price">
+							<input  type="number" name="price" value="" title="Десять цифр без пробелов" disabled />
+						</div>
+						<div class="adminTable_cell adminTable_cell-phone">
+							<input  type="tel" name="phone" value="" title="Десять цифр без пробелов" pattern='[0-9]{10}' required disabled />
+						</div>
+						<div class="adminTable_cell adminTable_cell-email">
+							<input  type="email" name="email" pattern='^[a-z0-9_][a-z0-9\._-]*@([a-z0-9]+([a-z0-9-]*[a-z0-9]+)*\.)+[a-z]+$' value="" disabled>
+						</div>
+						<div class="adminTable_cell adminTable_cell-date">
+							<input  type="date" name="date_order" value="" title="Введите дату в формате дд.мм.гггг время в формате чч:мм:сс" pattern='\d{2}\.\d{2}\.\d{4}(\s\d{2}:\d{2}:\d{2}){0,1}' required disabled />
+						</div>
+						<div class="adminTable_cell adminTable_cell-date">
+							<input  type="date" name="date_confirm" value="" disabled >
+						</div>
+						<div class="adminTable_cell adminTable_cell-date">
+							<input  type="date" name="date_pay" value="" disabled >
+						</div>
+						<div class="adminTable_cell adminTable_cell-date">
+							<input  type="date" name="date_cancel" value="" disabled >
+						</div>
+					</div>-->
+				</div>
+			</form>
+		</div>
+		<div class="popup">
+			<div class="popup_message_window">
+				<p class="popup_message_window-content"></p>
+				<div class="popup_message_window-btn_ok">OK</div>
+			</div>
+		</div>
+		<footer id="contacts" >
+			<div>
+				<p>Контакты: Телефон: +7(965) 284-15-09</p>
+				<p>Copyrigt &copy; 2016-2017. Все права защищены.</p>
+				<p>E-mail: michael.kyz@gmail.com</p>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="js/helper.js"></script>
+		<script type="text/javascript" src="js/model_table.js"></script>
+		<script type="text/javascript" src="js/view_table.js"></script>
+		<script type="text/javascript" src="js/controller_admin.js"></script>
+		<script type="text/javascript" src="js/index_admin.js"></script>	
+	</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="6">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1512" startPos="2002" endPos="2002" selMode="0" lang="Javascript" encoding="-1" filename="D:\projects\table_edit\app\js\controller_admin.js" backupFilePath="" originalFileLastModifTimestamp="1510735760" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2704" startPos="10726" endPos="10726" selMode="0" lang="Javascript" encoding="-1" filename="D:\projects\table_edit\app\js\view_table.js" backupFilePath="" originalFileLastModifTimestamp="1510644852" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1712" startPos="1596" endPos="1596" selMode="0" lang="Javascript" encoding="-1" filename="D:\projects\table_edit\app\js\model_table.js" backupFilePath="" originalFileLastModifTimestamp="1510646987" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="536" startPos="709" endPos="709" selMode="0" lang="Javascript" encoding="-1" filename="D:\projects\table_edit\app\js\helper.js" backupFilePath="" originalFileLastModifTimestamp="1510240139" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="536" startPos="2" endPos="2" selMode="0" lang="Javascript" encoding="-1" filename="D:\projects\table_edit\app\js\index_admin.js" backupFilePath="" originalFileLastModifTimestamp="1509957340" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="864" startPos="2707" endPos="2707" selMode="0" lang="CSS" encoding="-1" filename="D:\projects\table_edit\app\less\main_admin.less" backupFilePath="" originalFileLastModifTimestamp="1510735976" />
+            <File firstVisibleLine="99" xOffset="0" scrollWidth="2192" startPos="5633" endPos="5968" selMode="0" lang="HTML" encoding="65001" filename="D:\projects\table_edit\app\index.html" backupFilePath="" originalFileLastModifTimestamp="1510736158" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>
